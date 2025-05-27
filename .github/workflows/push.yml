@@ -1,0 +1,12 @@
+name: Publish Docker Image
+on: [push]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and Push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/mbap-dev/sync-bucket:latest
