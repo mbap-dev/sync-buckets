@@ -1,0 +1,2 @@
+# /etc/cron.d/sync-cron (dentro do container)
+* * * * * root /sync.sh >> /var/log/sync.log 2>&1
